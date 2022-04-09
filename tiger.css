@@ -618,10 +618,11 @@ body {
 } */
 
 .title {
+  line-height: 1;
   font-size: 50px;
-  padding: 100px 0;
+  padding: 30px 0;
   margin-top: 20px;
-  color: #40ad61;
+  color: #924308;
 }
 
 .title strong {
@@ -645,7 +646,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.tiger::after {
+/* .tiger::after {
   content: "";
   background-image: url(/imking.png);
   background-position: center;
@@ -658,4 +659,4 @@ body {
   left: 25%;
   transform: translate(-50%, -50%);
   z-index: -1;
-}
+} */
