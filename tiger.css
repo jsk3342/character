@@ -3,15 +3,14 @@ body {
   font-family: "Rubik Bubbles", cursive;
 }
 
-body,
-div {
+body {
   margin: 0;
 }
 
 h1 {
   margin: 0;
   font-size: 100%;
-  font-weight: normal;
+  font-weight: inherit;
 }
 
 strong {
@@ -24,14 +23,14 @@ strong {
   --basic: #1f1715;
 }
 
-/* @keyframes size {
+@keyframes size {
   0% {
-    transform: scale(0.8);
+    transform: scale(0.9);
   }
   100% {
     transform: scale(1);
   }
-} */
+}
 
 /* Layouts */
 
@@ -55,6 +54,13 @@ body {
 }
 
 .tiger {
+  animation-name: size;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.tiger-face {
   background-color: var(--primary-color);
   color: var(--secondary);
   width: 300px;
@@ -68,10 +74,6 @@ body {
   position: relative;
   border: 5px solid var(--basic);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-  animation-name: size;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
 }
 
 /* 얼굴 상단 */
@@ -611,16 +613,6 @@ body {
   justify-content: center;
 }
 
-/* .chin::after {
-  content: "";
-  background-color: ;
-  display: block;
-  position: absolute;
-  top: 0;
-  width: 300px;
-  height: 100px;
-} */
-
 .title {
   line-height: 1;
   font-size: 50px;
@@ -638,7 +630,7 @@ body {
 
 /* 이미지 */
 
-.tiger::before {
+.tiger-face::before {
   content: "";
   background-image: url(/im-the-king.png);
   background-position: center;
@@ -650,6 +642,8 @@ body {
   bottom: 180px;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 1s;
 }
 
 .tiger::after {
@@ -665,6 +659,8 @@ body {
   left: 25%;
   transform: translate(-50%, -50%);
   z-index: -1;
+  opacity: 0;
+  transition: all 1s;
 }
 
 .title::after {
@@ -680,4 +676,10 @@ body {
   background-size: cover;
   transform: rotate(-29deg);
   z-index: -1;
+}
+
+.tiger-face:hover::before,
+.tiger:hover::after,
+.title:hover::after {
+  opacity: 1;
 }
