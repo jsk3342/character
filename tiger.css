@@ -417,7 +417,6 @@ body {
   width: 140px;
   height: 70px;
   border-radius: 0px 0px 40px 18px;
-  /* background-color: var(--primary-color); */
   background-color: var(--primary-color);
 }
 
@@ -725,23 +724,7 @@ body {
   transition: all 1s;
 }
 
-/* .title::after {
-  content: " ";
-  display: block;
-  position: absolute;
-  right: -300px;
-  bottom: 250px;
-  width: 400px;
-  height: 300px;
-  background-image: url(light.png);
-  background-position: center;
-  background-size: cover;
-  transform: rotate(-29deg);
-  z-index: -1;
-} */
-
 .tiger-face:hover::before,
-.tiger:hover::after,
-.title:hover::after {
+.tiger:hover::after {
   opacity: 1;
 }
