@@ -632,7 +632,7 @@ body {
 
 .tiger-face::before {
   content: "";
-  background-image: url(/im-the-king.png);
+  background-image: url(im-the-king.png);
   background-position: center;
   background-size: cover;
   position: absolute;
@@ -648,22 +648,22 @@ body {
 
 .tiger::after {
   content: "";
-  background-image: url(/imking.png);
+  background-image: url(final1.png);
   background-position: center;
   background-size: cover;
   position: absolute;
   display: block;
-  width: 500px;
-  height: 500px;
-  top: 450px;
-  left: 25%;
+  width: 950px;
+  height: 700px;
+  top: 380px;
+  left: 95%;
   transform: translate(-50%, -50%);
   z-index: -1;
   opacity: 0;
   transition: all 1s;
 }
 
-.title::after {
+/* .title::after {
   content: " ";
   display: block;
   position: absolute;
@@ -676,7 +676,7 @@ body {
   background-size: cover;
   transform: rotate(-29deg);
   z-index: -1;
-}
+} */
 
 .tiger-face:hover::before,
 .tiger:hover::after,
