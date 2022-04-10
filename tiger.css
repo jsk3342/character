@@ -23,12 +23,66 @@ strong {
   --basic: #1f1715;
 }
 
+/* 애니메이션 */
+
 @keyframes size {
   0% {
     transform: scale(0.9);
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes left-ear {
+  0% {
+    transform: rotate(-80deg);
+  }
+
+  50% {
+    transform: rotate(-60deg);
+  }
+
+  75% {
+    transform: rotate(-82deg);
+  }
+
+  85% {
+    transform: rotate(-70deg);
+  }
+
+  95% {
+    transform: rotate(-82deg);
+  }
+
+  100% {
+    transform: rotate(-80deg);
+  }
+}
+
+@keyframes right-ear {
+  0% {
+    transform: rotate(80deg);
+  }
+
+  50% {
+    transform: rotate(60deg);
+  }
+
+  75% {
+    transform: rotate(82deg);
+  }
+
+  85% {
+    transform: rotate(70deg);
+  }
+
+  95% {
+    transform: rotate(82deg);
+  }
+
+  100% {
+    transform: rotate(80deg);
   }
 }
 
@@ -93,6 +147,10 @@ body {
   transform: rotate(-80deg);
   border-top-left-radius: 50px;
   border-top-right-radius: 15px;
+  animation-name: left-ear;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 .ear.left::before {
   content: " ";
@@ -133,6 +191,10 @@ body {
   transform: rotate(80deg);
   border-top-left-radius: 15px;
   border-top-right-radius: 50px;
+  animation-name: right-ear;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .ear.ear.right::before {
@@ -671,7 +733,7 @@ body {
   bottom: 250px;
   width: 400px;
   height: 300px;
-  background-image: url(/light.png);
+  background-image: url(light.png);
   background-position: center;
   background-size: cover;
   transform: rotate(-29deg);
