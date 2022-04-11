@@ -693,7 +693,7 @@ body {
 
 .tiger-face::before {
   content: "";
-  background-image: url(im-the-king.png);
+  background-image: url(images/im-the-king.png);
   background-position: center;
   background-size: cover;
   position: absolute;
@@ -709,7 +709,7 @@ body {
 
 .tiger::after {
   content: "";
-  background-image: url(final1.png);
+  background-image: url(images/final1.png);
   background-position: center;
   background-size: cover;
   position: absolute;
